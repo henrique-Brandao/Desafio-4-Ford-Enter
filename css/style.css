@@ -29,7 +29,6 @@ body {
     padding: 2%;
     position: relative;
     box-shadow: 0.10px 0.5px 0.5px rgb(179, 163, 163);
-    transition: 0.3s ease-in-out;
 }
 
 .cabecalho__imagem {
