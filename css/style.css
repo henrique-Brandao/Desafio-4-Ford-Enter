@@ -6,114 +6,158 @@
 
 * {
     margin: 0;
-    letter-spacing: 1px;
     padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    font-family: "Montserrat", sans-serif;
 }
+
+
 body {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 81.3vh;
-    flex-direction: column;
-}
-
+/* Cabeçalho */
 .cabecalho {
     background-color: white;
-    text-decoration: none;
-    font-family: "Montserrat", sans-serif;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px;
+    justify-content: space-between; /* Comportamento padrão */
+    padding: 2%;
+    position: relative;
+    box-shadow: 0.10px 0.5px 0.5px rgb(179, 163, 163);
+    transition: 0.3s ease-in-out;
 }
 
-
+.cabecalho__imagem {
+    max-height: 60px;
+    display: flex;
+    gap: 20px;
+}
 
 .cabecalho__menu {
     display: flex;
-    gap: 20px;
-    width: 70%;
-    height: 70%;
-    justify-content: space-around;
-
+    gap: 202px;
+    font-size: 40px;
 }
 
 .cabecalho__menu__links {
     text-decoration: none;
-    font-size: 1.5rem;
-    color:  var(--cor-primaria);
+    font-size: 1.2rem;
+    color: var(--cor-primaria);
     font-weight: bold;
-    transition: all 0.2s ease-in-out;
-    display: flex;
-    justify-content: center;
+    transition: 0.2s ease-in-out;
+    font-family: "Montserrat", sans-serif;
 }
+
 
 .cabecalho__menu__links:hover {
-    transform: scale(1.1);  
+    transform: scale(1.1);
 }
 
-.principal {
-    padding: 10px;
-    font-family: "Montserrat", sans-serif;
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1; /* Faz com que o main ocupe o espaço disponível */
+    padding: 20px;
 }
 
 .principal__paragrafo {
     margin: 20px;
-    padding: 30px;
+    padding: 20px;
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
 }
 
+.principal__imagem {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Rodapé */
 .rodape {
     background-color: var(--cor-primaria);
-    font-family: "Montserrat", sans-serif;
+    color: white;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    padding: 5px;
-    
-}
-
-.rodape__logo {
-    display: flex;
-    margin-left: auto;
+    padding: 10px;
+    text-align: center;
 }
 
 .rodape__container {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-bottom: 10px;
 }
-
 
 .rodape__paragrafo {
-    display: flex;
-    color: white;
-    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
 }
 
-.rodape__botao {
-    transition: all 0.2s ease-in-out;
+.rodape__botao{
+    transition: 0.2s ease-in-out;
 }
-
 .rodape__botao:hover {
     transform: scale(1.1);
 }
 
-@media screem and (max-width: 768px) {
+.rodape__logo {
+    max-height: 60px;
+}
+
+/* Responsividade para telas médias */
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cabecalho__menu {
+        flex-direction: column;
+        gap: 10px;
+    }
     .rodape {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+        flex-direction: column;
+        gap: 10px;
     }
 }
 
-@media screem and (max-width: 426px) {
+/* Responsividade para telas pequenas */
+@media (max-width: 426px) {
+    .cabecalho__menu__links {
+        font-size: 1rem;
+    }
+    .principal__paragrafo {
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+}
+
+/* Ajustes para telas de desktop */
+@media (min-width: 1024px) {
+    /* Cabeçalho: centraliza o menu e posiciona a logo à esquerda */
+    .cabecalho {
+        justify-content: center;
+        position: relative;
+    }
+    .cabecalho__imagem {
+        position: absolute;
+        left: 20px;
+    }
+    
+    /* Rodapé: redes sociais à esquerda e logo à direita */
     .rodape {
-        grid-template-columns: repeat(1, 1fr);
-        /* gap: 2rem; */
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
     }
 }
