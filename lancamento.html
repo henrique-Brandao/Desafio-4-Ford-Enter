@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/lancamento.css">
     <title>Document</title>
 </head>
+
 <body>
     <header class="cabecalho">
         <img src="./img/logo-ford-256.png" alt="Logo da Ford" class="cabecalho__imagem">
@@ -15,7 +17,40 @@
             <a class="cabecalho__menu__links" href="contato.html">Contato</a>
         </nav>
     </header>
-<main></main>
+
+    <main class="principal">
+        <div class="principal__area">
+            <video src="video.mp4" controls autoplay muted class="principal__video">
+                Video não suportado
+            </video>
+        </div>
+        <section class="principal__descricao">
+
+            <h2>Nova Pickup <strong>Super Força</strong></h2>
+            <p>
+                Conheça a nova geração de picapes que combina desempenho,
+                conforto e tecnologia de ponta para encarar qualquer desafio.
+            </p>
+        </section>
+
+        <section class="modelos">
+            <div class="modelos__lista">
+              <img src="./img/storm.jpg" alt="Modelo 1">
+              <img src="./img/XL Cabine.jpg" alt="Modelo 2">
+              <img src="./img/xls 2.2 diesel.jpg" alt="Modelo 3">
+            </div>
+          
+            <table class="tabela-modelos">
+              <tr>
+                <td><input type="checkbox"> <strong>Ranger X</strong> 2.2 Diesel <br> R$ 200.000</td>
+                <td><input type="checkbox"> <strong>Ranger Y</strong> 3.0 Diesel <br> R$ 250.000</td>
+                <td><input type="checkbox"> <strong>Ranger Z</strong> 4.0 Diesel <br> R$ 280.000</td>
+              </tr>
+            </table>
+          
+            <button class="botao-comparar">Comparar Carros</button>
+          </section>
+    </main>
 
 
     <footer class="rodape">
@@ -33,6 +68,7 @@
         </div>
         <img src="./img/ford-96.png" alt="logo ford" class="rodape__logo">
     </footer>
-    
+
 </body>
+
 </html>
