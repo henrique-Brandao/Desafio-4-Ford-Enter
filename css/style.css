@@ -51,6 +51,7 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
+
 .cabecalho__menu__links:hover {
     transform: scale(1.1);
 }
@@ -77,6 +78,12 @@ main {
     height: auto;
 }
 
+.principal__imagem {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Rodapé */
 .rodape {
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
