@@ -3,7 +3,6 @@
 
 :root {
     --cor-primaria: #080894;
-;
     --cor-secundaria: #ffffff;
 }
 
@@ -61,22 +60,22 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 5px;
 }
 
 .principal__video {
-    width: 80%;
-    max-width: 900px;
+    width: 130% 40%;
     margin-bottom: 20px;
+    padding: 0 25.9%;
+    background-color: black;
 }
 
 .principal__area {
         width: 100%;
-        background-color: #000;
+        height: auto;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 20px 0; 
     }
   
 
@@ -108,34 +107,34 @@ body {
     border: 1px solid #ccc;
 }
 
-.modelos {
+.principal__modelos {
     text-align: center;
     padding: 20px;
   }
   
-  .modelos__lista {
+  .principal__modelos__lista {
     display: flex;
     justify-content: center;
     gap: 20px;
     margin-bottom: 20px;
   }
   
-  .modelos__lista img {
-    width: 200px; /* Ajuste conforme necessário */
+  .principal__modelos__lista img {
+    width: 15rem;
   }
   
-  .tabela-modelos {
+  .principal__tabela-modelos {
     width: 80%;
     margin: 0 auto;
     border-collapse: collapse;
   }
   
-  .tabela-modelos td {
+  .principal__tabela-modelos td {
     text-align: center;
     padding: 10px;
   }
   
-  .botao-comparar {
+  .principal__botao-comparar {
     background-color: #005eff;
     color: white;
     border: none;
@@ -144,7 +143,13 @@ body {
     cursor: pointer;
     margin-top: 15px;
     border-radius: 5px;
+    transition: all 0.2s ease-in-out;
   }
+
+.principal__botao-comparar:hover {
+transform: scale(1.1);
+background-color: #004ed5;
+}
 
 .rodape {
     background-color: var(--cor-primaria);
