@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,600;1,600&display=swap');
+
+
 :root {
     --cor-primaria: #080894;
     --cor-secundaria: #ffffff;
@@ -7,22 +10,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     font-family: "Montserrat", sans-serif;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    overflow-x: hidden;
+    color: #333;
 }
 
 .cabecalho {
     background-color: var(--cor-secundaria);
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Comportamento padrão */
+    justify-content: space-between;
     padding: 2%;
     position: relative;
     box-shadow: 0.10px 0.5px 0.5px rgb(179, 163, 163);
@@ -53,8 +53,7 @@ body {
     transform: scale(1.1);
 }
 
-
-main {
+.principal {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,7 +63,34 @@ main {
     padding: 20px;
 }
 
+.principal__container__subtitulo {
+    text-align: center;
+    padding: 2%;
+}
 
+input,
+select,
+textarea,
+button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.principal__container__formulario__botao {
+    background-color: #0044cc;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    border: none;
+}
+
+.principal__container__formulario__botao:hover {
+    transform: scale(1.03);
+    background-color: #0033aa;
+}
 
 .rodape {
     background-color: var(--cor-primaria);
@@ -74,7 +100,9 @@ main {
     align-items: center;
     padding: 0.5%;
     text-align: center;
-    position: fixed 2px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .rodape__container {
@@ -88,11 +116,11 @@ main {
     font-family: "Montserrat", sans-serif;
 }
 
-.rodape__botao{
+.rodape__botao {
     transition: 0.2s ease-in-out;
     display: flex;
-    gap: 1000%;
 }
+
 .rodape__botao:hover {
     transform: scale(1.1);
 }
@@ -101,27 +129,12 @@ main {
     max-height: 60px;
 }
 
-/* Responsividade para telas médias */
-@media (max-width: 768px) {
-    .cabecalho {
-        flex-direction: column;
-        text-align: center;
-    }
-    .cabecalho__menu {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .rodape {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
 /* Responsividade para telas pequenas */
 @media (max-width: 426px) {
     .cabecalho__menu__links {
         font-size: 1rem;
     }
+
     .principal__paragrafo {
         font-size: 0.9rem;
         padding: 15px;
@@ -132,18 +145,48 @@ main {
     }
 }
 
+@media (max-width: 600px) {
+    .cabecalho__menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+
+
+/* Responsividade para telas médias */
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cabecalho__menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .rodape {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
 /* Ajustes para telas de desktop */
 @media (min-width: 1024px) {
+
     /* Cabeçalho: centraliza o menu e posiciona a logo à esquerda */
     .cabecalho {
         justify-content: center;
         position: relative;
     }
+
     .cabecalho__imagem {
         position: absolute;
         left: 20px;
     }
-    
+
     /* Rodapé: redes sociais à esquerda e logo à direita */
     .rodape {
         flex-direction: row;

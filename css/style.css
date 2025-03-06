@@ -24,7 +24,7 @@ body {
     background-color: var(--cor-secundaria);
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Comportamento padrão */
+    justify-content: space-between;
     padding: 2%;
     position: relative;
     box-shadow: 0.10px 0.5px 0.5px rgb(179, 163, 163);
@@ -62,7 +62,6 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
-    flex: 1; /* Faz com que o main ocupe o espaço disponível */
     padding: 20px;
 }
 
@@ -83,7 +82,6 @@ main {
     height: auto;
 }
 
-/* Rodapé */
 .rodape {
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
@@ -91,8 +89,9 @@ main {
     flex-direction: column;
     align-items: center;
     padding: 0.5%;
-    text-align: center;
-    position: fixed 2px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .rodape__container {
@@ -109,7 +108,6 @@ main {
 .rodape__botao{
     transition: 0.2s ease-in-out;
     display: flex;
-    gap: 1000%;
 }
 .rodape__botao:hover {
     transform: scale(1.1);
@@ -140,6 +138,7 @@ main {
     .cabecalho__menu__links {
         font-size: 1rem;
     }
+
     .principal__paragrafo {
         font-size: 0.9rem;
         padding: 15px;
@@ -150,18 +149,48 @@ main {
     }
 }
 
+@media (max-width: 600px) {
+    .cabecalho__menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+
+
+/* Responsividade para telas médias */
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cabecalho__menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .rodape {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
 /* Ajustes para telas de desktop */
 @media (min-width: 1024px) {
+
     /* Cabeçalho: centraliza o menu e posiciona a logo à esquerda */
     .cabecalho {
         justify-content: center;
         position: relative;
     }
+
     .cabecalho__imagem {
         position: absolute;
         left: 20px;
     }
-    
+
     /* Rodapé: redes sociais à esquerda e logo à direita */
     .rodape {
         flex-direction: row;
