@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/contato.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="shortcut icon" type="image/x-icon" href="./imgs/FORDZINHA.ico">
-    <title>Desafio Ford Enter</title>
-</head>
 
+    <title>Contato</title>
+</head>
 <body>
     <header class="cabecalho">
         <img src="../imgs/logo-ford-256.png" alt="Logo da Ford" class="cabecalho__imagem">
         <nav class="cabecalho__menu">
-            <a class="cabecalho__menu__links" href="index.html">Home</a>
+            <a class="cabecalho__menu__links" href="../index.html">Home</a>
             <a class="cabecalho__menu__links" href="lancamento.html">Lançamentos</a>
             <a class="cabecalho__menu__links" href="contato.html">Contato</a>
         </nav>
     </header>
 
     <main class="principal">
-        <img src="../imgs/ranger-black.jpg" alt="Foto da Ranger Black" class="principal__imagem">
-        <p class="principal__paragrafo">Essa é a nova Ford Ranger 2022. Verifique a novidade <a
-                href="https://www.youtube.com/watch?v=vQsryuNmsL0" target="_blank">aqui</a>
+        <div class="principal__container">
+            <h2 class="principal__container__subtitulo">Fale Conosco</h2>
+            <form class="principal__container__formulario">
+                <input type="text" placeholder="Nome" required>
+                <input type="email" placeholder="E-mail" required>
+                <input type="tel" placeholder="Telefone" required>
+                <select required>
+                    <option value="">Selecione o tipo de contato</option>
+                    <option value="elogio">Elogio</option>
+                    <option value="reclamacao">Reclamação</option>
+                    <option value="solicitacao">Solicitação</option>
+                </select>
+                <textarea placeholder="Mensagem" rows="3" required></textarea>
+                <button type="submit" class="principal__container__formulario__botao">Enviar</button>
+            </form>
+        </div>
     </main>
 
     <footer class="rodape">
@@ -41,6 +53,6 @@
         </div>
         <img src="../imgs/ford-96.png" alt="logo ford" class="rodape__logo">
     </footer>
+    
 </body>
-
 </html>
