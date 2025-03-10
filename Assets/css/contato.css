@@ -75,10 +75,20 @@ select,
 textarea,
 button {
     width: 100%;
+    max-width: 700px; 
     margin-top: 10px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+textarea {
+    padding: 5px;
+    line-height: 1.15;
+}
+
+.principal__container__div {
+    padding: 100px;
 }
 
 .principal__container__formulario__botao {
@@ -140,4 +150,10 @@ button {
         align-items: center;
         gap: 10px;
     }
+
+    .principal__container__div {
+        padding: 0;
+    }
+    
+
 }
