@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/lancamento.css">
     <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/lancamento.css">
     <link rel="shortcut icon" href="../imgs/FORDZINHA.ico" type="imagex/png">
     <title>Lançamentos</title>
 </head>
@@ -21,57 +21,59 @@
     </header>
 
     <main class="principal">
-        <div class="principal__area">
-            <iframe src="https://www.youtube.com/embed/vQsryuNmsL0  " frameborder="0" allowfullscreen class="principal__video">
-                Video não suportado
-            </iframe>
-
-        </div>
-        <section class="principal__descricao">
-<!-- 
-            <h2>Nova Pickup <strong>Super Força</strong></h2>
-            <p>
-                Conheça a nova geração de picapes que combina desempenho,
-                conforto e tecnologia de ponta para encarar qualquer desafio.
-            </p> -->
-        </section>
-
-        <section class="principal__modelos">
-            <div class="principal__modelos__lista">
-              <img src="../imgs/storm.jpg" alt="Modelo 1">
-              <img src="../imgs/XL Cabine.jpg" alt="Modelo 2">
-              <img src="../imgs/xls 2.2 diesel.jpg" alt="Modelo 3">
+        <div class="principal__conteudo">
+            <div class="principal__video-container">
+                <iframe src="https://www.youtube.com/embed/vQsryuNmsL0" allowfullscreen class="principal__video">
+                    Video não suportado
+                </iframe>
             </div>
-          
-            <table class="principal__tabela-modelos">
-              <tr> 
-                <td><input type="checkbox"> <strong>Carro 1</strong> <br> R$ 200.000</td>
-                <td><input type="checkbox"> <strong>Carro 2</strong> <br> R$ 250.000</td>
-                <td><input type="checkbox"> <strong>Carro 3</strong> <br> R$ 280.000</td>
-              </tr>
-            </table>
-          
-            <button class="principal__botao-comparar">Comparar Carros</button>
-          </section>
-    </main>
+            <section class="principal__modelos">
+                <table class="principal__tabela-modelos">
+                    <tbody>
+                        <tr class="principal__tabela-imagens">
+                            <td><img src="../imgs/XL Cabine.jpg" alt="Modelo 2"></td>
+                            <td><img src="../imgs/xls 2.2 diesel.jpg" alt="Modelo 3"></td>
+                            <td><img src="../imgs/storm.jpg" alt="Modelo 1"></td>
+                        </tr>
+                        <tr class="principal__tabela-detalhes">
 
+                            <td>
+                                <input type="checkbox" id="principal__checkbox1"> <label
+                                    for="principal__checkbox1" class="principal__checkbox-paragrafo">RANGER XL 2.2 DIESEL 4x4 MT  </label> <br> R$ 200.000  
+                            </td>
+
+                            <td>
+                                <input type="checkbox" id="principal__checkbox2"> <label
+                                    for="principal__checkbox2" class="principal__checkbox-paragrafo">RANGER XLS 2.2 DIESEL 4x4 MT</label> <br> R$ 250.000
+                            </td>
+                            
+                            <td>
+                                <input type="checkbox" id="principal__checkbox3"> <label
+                                    for="principal__checkbox3" class="principal__checkbox-paragrafo">STORM 3.2 DIESEL 4x4 AT</label> <br> R$ 280.000
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="principal__botao-comparar">Comparar Carros</button>
+            </section>
+        </div>
+    </main>
 
     <footer class="rodape">
         <div class="rodape__container">
             <p class="rodape__paragrafo">Redes sociais</p>
             <a href="https://www.facebook.com/FordBrasil/" target="_blank" class="rodape__botao">
-                <img src="../imgs/facebook-50.png" alt="facebook" width="35px" height="35px">
+                <img src="../imgs/facebook-50.png" alt="facebook" width="35" height="35">
             </a>
             <a href="https://www.youtube.com/@fordbrasil" target="_blank" class="rodape__botao">
-                <img src="../imgs/youtube-squared-50.png" alt="youtube" width="35px" height="35px">
+                <img src="../imgs/youtube-squared-50.png" alt="youtube" width="35" height="35">
             </a>
             <a href="https://www.instagram.com/fordbrasil/" target="_blank" class="rodape__botao">
-                <img src="../imgs/instagram-logo-50.png" alt="instagram" width="35px" height="35px">
+                <img src="../imgs/instagram-logo-50.png" alt="instagram" width="35" height="35">
             </a>
         </div>
         <img src="../imgs/ford-96.png" alt="logo ford" class="rodape__logo">
     </footer>
-
 </body>
 
 </html>

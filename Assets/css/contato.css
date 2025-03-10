@@ -10,7 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.2px;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -23,22 +23,25 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2%;
-    position: relative;
+    padding: 1rem;
     box-shadow: 0.10px 0.5px 0.5px rgb(179, 163, 163);
+    flex-shrink: 0;
+    font-family: "Montserrat", sans-serif;
 }
 
 .cabecalho__imagem {
     max-height: 60px;
-    display: flex;
-    gap: 20px;
 }
 
 .cabecalho__menu {
     display: flex;
-    gap: 202px;
-    font-size: 40px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
 }
+
 
 .cabecalho__menu__links {
     text-decoration: none;
@@ -46,7 +49,6 @@ body {
     color: var(--cor-primaria);
     font-weight: bold;
     transition: 0.2s ease-in-out;
-    font-family: "Montserrat", sans-serif;
 }
 
 .cabecalho__menu__links:hover {
@@ -96,10 +98,11 @@ button {
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    padding: 0.5%;
-    text-align: center;
+    padding: 0.5rem;
+    text-align: left;
+    flex-shrink: 0;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -109,12 +112,12 @@ button {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 10px;
 }
 
 .rodape__paragrafo {
     font-family: "Montserrat", sans-serif;
 }
+
 
 .rodape__botao {
     transition: 0.2s ease-in-out;
@@ -125,73 +128,16 @@ button {
     transform: scale(1.1);
 }
 
+
 .rodape__logo {
     max-height: 60px;
 }
 
-/* Responsividade para telas pequenas */
-@media (max-width: 426px) {
-    .cabecalho__menu__links {
-        font-size: 1rem;
-    }
 
-    .principal__paragrafo {
-        font-size: 0.9rem;
-        padding: 15px;
-    }
-
-    .principal__imagem {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 600px) {
-    .cabecalho__menu {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-}
-
-
-
-/* Responsividade para telas médias */
 @media (max-width: 768px) {
-    .cabecalho {
-        flex-direction: column;
-        text-align: center;
-    }
-
     .cabecalho__menu {
         flex-direction: column;
-        gap: 10px;
-    }
-
-    .rodape {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-/* Ajustes para telas de desktop */
-@media (min-width: 1024px) {
-
-    /* Cabeçalho: centraliza o menu e posiciona a logo à esquerda */
-    .cabecalho {
-        justify-content: center;
-        position: relative;
-    }
-
-    .cabecalho__imagem {
-        position: absolute;
-        left: 20px;
-    }
-
-    /* Rodapé: redes sociais à esquerda e logo à direita */
-    .rodape {
-        flex-direction: row;
-        justify-content: space-between;
         align-items: center;
-        text-align: left;
+        gap: 10px;
     }
 }
