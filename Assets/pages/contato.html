@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/contato.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="shortcut icon" type="image/x-icon" href="./imgs/FORDZINHA.ico">
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Contato</title>
 </head>
 
@@ -24,8 +24,9 @@
     <main class="principal">
         <div class="principal__container">
             <div class="principal__container__div">
-            <h2 class="principal__container__subtitulo">Fale Conosco</h2>
-                <form class="principal__container__formulario">
+                <h2 class="principal__container__subtitulo">Fale conosco</h2>
+                <form id="formulario" method="get" class="principal__container__formulario"
+                    onsubmit="mostrarAlerta(event)">
                     <input type="text" placeholder="Nome" required>
                     <input type="email" placeholder="E-mail" required>
                     <input type="tel" placeholder="Telefone" required>
@@ -59,6 +60,27 @@
         <img src="../imgs/ford-96.png" alt="logo ford" class="rodape__logo">
     </footer>
 
+
+    <script>
+        function mostrarAlerta(event) {
+            event.preventDefault();
+
+            Swal.fire({
+                title: "Sucesso!",
+                text: "Formulário enviado com sucesso!",
+                icon: "success",
+                confirmButtonText: "OK",
+                customClass: {
+                    title: "titulo-popup",
+                    popup: "popup",
+                    confirmButton: "botao-popup"
+                }
+            }).then(() => {
+                document.getElementById("formulario").reset();
+            });
+        }
+
+    </script>
 </body>
 
 </html>

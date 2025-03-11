@@ -132,7 +132,9 @@ body {
 
 .principal__checkbox-paragrafo {
     color: #005eff;
+    cursor: pointer;
 }
+
 
 input[type="checkbox"] {
     width:  14px;
