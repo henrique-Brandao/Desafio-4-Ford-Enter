@@ -60,27 +60,7 @@
         <img src="../imgs/ford-96.png" alt="logo ford" class="rodape__logo">
     </footer>
 
-
-    <script>
-        function mostrarAlerta(event) {
-            event.preventDefault();
-
-            Swal.fire({
-                title: "Sucesso!",
-                text: "Formulário enviado com sucesso!",
-                icon: "success",
-                confirmButtonText: "OK",
-                customClass: {
-                    title: "titulo-popup",
-                    popup: "popup",
-                    confirmButton: "botao-popup"
-                }
-            }).then(() => {
-                document.getElementById("formulario").reset();
-            });
-        }
-
-    </script>
+<script src="../JS/app.js" type="text/javascript"></script>
 </body>
 
 </html>

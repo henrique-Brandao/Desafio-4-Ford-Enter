@@ -25,7 +25,6 @@ body {
     color: #333;
 }
 
-
 .cabecalho {
     background-color: var(--cor-secundaria);
     display: flex;
@@ -137,8 +136,7 @@ body {
 
 
 input[type="checkbox"] {
-    width:  14px;
-    height: 14px;
+ transform: scale(1.1);
 }
 
 .principal__botao-comparar {
@@ -215,7 +213,7 @@ input[type="checkbox"] {
         padding: 5px;
     }
 
-    .tabela-imagens td img {
+    .principal__tabela-imagens td img {
         max-width: 150px;
     }
 }
