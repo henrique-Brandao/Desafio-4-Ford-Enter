@@ -15,31 +15,40 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     color: #333;
+    min-height: 100vh;
 }
 
 .cabecalho {
-    background-color: var(--cor-secundaria);
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    background-color: var(--cor-secundaria);
+    justify-content: center;
+    flex-wrap: wrap;
     padding: 1rem;
+    gap: 5px;
     box-shadow: 0.10px 0.5px 0.5px rgb(179, 163, 163);
-    flex-shrink: 0;
     font-family: "Montserrat", sans-serif;
 }
 
 .cabecalho__imagem {
-    max-height: 60px;
+    max-height: 45px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
 }
 
 .cabecalho__menu {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    flex-direction: row;
     width: 100%;
     max-width: 500px;
-    margin: 0 auto; 
+    margin: 0 auto;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 
@@ -88,10 +97,6 @@ textarea {
     line-height: 1.15;
 }
 
-.principal__container__div {
-    padding: 100px;
-}
-
 .principal__container__formulario__botao {
     background-color: #0044cc;
     color: white;
@@ -117,34 +122,32 @@ select {
     align-items: center;
     padding: 0.5rem;
     text-align: left;
-    flex-shrink: 0;
-    position: fixed;
-    bottom: 0;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 .rodape__container {
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .rodape__paragrafo {
     font-family: "Montserrat", sans-serif;
 }
 
-
 .rodape__botao {
     transition: 0.2s ease-in-out;
-    display: flex;
 }
 
 .rodape__botao:hover {
     transform: scale(1.1);
 }
 
-
 .rodape__logo {
+    display: flex;
+    justify-content: center;
     max-height: 60px;
 }
 
@@ -163,16 +166,3 @@ select {
     color: white !important;
 }
 
-@media (max-width: 768px) {
-    .cabecalho__menu {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .principal__container__div {
-        padding: 0;
-    }
-    
-
-}
