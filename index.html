@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Assets/css/style.css">
     <link rel="stylesheet" href="./Assets/css/reset.css">
     <link rel="shortcut icon" type="image/x-icon" href="./Assets/imgs/FORDZINHA.ico">
@@ -21,9 +21,14 @@
     </header>
 
     <main class="principal">
-        <img src="./Assets/imgs/ranger-black.jpg" alt="Foto da Ranger Black" class="principal__imagem"> 
-        <p class="principal__paragrafo">Essa é a nova Ford Ranger 2022. Verifique a novidade <a
-                href="https://www.youtube.com/watch?v=vQsryuNmsL0" target="_blank">aqui</a>
+        <div id="carousel">
+            <img id="img" src="" alt="Carro Ford" class="principal__imagem">
+            <a href="./Assets/pages/lancamento.html" id="carousel-title" target="_blank"></a>
+                <button id="botaoTras" class="buttons">&#9664;</button>
+                <button id="botaoFrente" class="buttons">&#9654;</button>
+           
+        </div>
+        
     </main>
 
     <footer class="rodape">
@@ -41,6 +46,7 @@
         </div>
         <img src="./Assets/imgs/ford-96.png" alt="logo ford" class="rodape__logo">
     </footer>
+    <script src="./Assets/JS/carousel.js"></script>
 </body>
 
 </html>

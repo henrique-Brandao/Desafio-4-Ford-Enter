@@ -119,3 +119,88 @@ body {
     display: flex;
     justify-content: center;
 }
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s;
+    
+}
+
+#carousel-title {
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+#img {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    object-fit: contain;
+    display: block; 
+}
+
+#botaoTras{
+    left: 10px;
+}
+
+#botaoFrente {
+    right: 10px;
+
+}
+
+#carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#carousel-link {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    color: white;
+    background: rgba(0,0,0,0.5);
+    padding: 10px;
+    text-align: center;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    #img {
+        max-height: 50vh;
+    }
+    
+    button {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #img {
+        max-height: 40vh;
+    }
+    
+    .cabecalho__menu__links {
+        font-size: 1rem;
+    }
+}
