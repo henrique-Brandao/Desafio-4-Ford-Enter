@@ -22,22 +22,26 @@
     </header>
 
     <main class="principal">
-        <div class="principal__container">                <h2 class="principal__container__subtitulo">Fale conosco</h2>
-                <form id="formulario" method="get" class="principal__container__formulario"
-                    onsubmit="mostrarAlerta(event)">
-                    <input type="text" placeholder="Nome" required>
-                    <input type="email" placeholder="E-mail" required>
-                    <input type="tel" placeholder="Telefone" required>
-                    <select required>
-                        <option value="">Selecione o tipo de contato</option>
-                        <option value="elogio">Elogio</option>
-                        <option value="reclamacao">Reclamação</option>
-                        <option value="solicitacao">Solicitação</option>
-                    </select>
-                    <textarea placeholder="Mensagem" rows="5" required></textarea>
-
-                    <button type="submit" class="principal__container__formulario__botao">Enviar</button>
-                </form>
+        <div class="principal__container">
+            <div>
+                <img src="../imgs/xls 2.2 diesel.jpg">
+            </div>
+            <div>
+                <h2 class="principal__container__subtitulo">Sobre Você</h2>
+            <form onsubmit="mostrarAlerta(event)" id="formulario" class="principal__container__formulario" >
+                <input type="text" name="nome" placeholder="NOME*" class="fordform" required>
+                <input type="text" name="email" placeholder="E-MAIL*" class="fordform" required>
+                <input type="text" name="cpf" placeholder="CPF*" class="fordform" required>
+                <input type="text" name="sobrenome" placeholder="SOBRENOME*" class="fordform" required>
+                <input type="text" name="telefone" placeholder="TELEFONE*" class="fordform" required>
+                <select name="contato" class="fordform" required>
+                    <option selected>COMO DESEJA SER CONTATADO</option>
+                    <option>TELEFONE</option>
+                    <option>E-MAIL</option>
+                </select>
+            <button type="submit" class="principal__container__formulario__botao">Enviar</button>
+            </form>
+            </div>
         </div>
     </main>
 
