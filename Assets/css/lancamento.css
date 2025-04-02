@@ -93,14 +93,19 @@ body {
 
 
 ul.modelcars {
-    display: block;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     text-align: center;
     margin-bottom: 40px;
+    gap: 20px;
 }
 
 ul.modelcars li {
-    display: inline-block;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     width: 300px;
     vertical-align: top;
 }
@@ -108,6 +113,7 @@ ul.modelcars li {
 img.photocar {
     display: block;
     width: 250px;
+    margin: 0 auto;
 }
 
 .checkbox {
@@ -161,14 +167,11 @@ table {
 
   tr:nth-child(even) {background-color: #f2f2f2;}
 
-dialog#compare {
+  dialog#compare {
     position: fixed;
-    width: 90%;
-    max-width: 800px;
-    min-width: unset;
-    height: auto;
-    max-height: 80vh;
-    min-height: unset;
+    width: 90vw;
+    max-width: 1200px;
+    height: 90vh;
     background: #fff;
     top: 50%;
     left: 50%;
@@ -177,7 +180,7 @@ dialog#compare {
     padding: 20px;
     box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.34);
     border: none;
-    overflow-y: auto;
+    overflow: hidden; /* Remove a rolagem */
 }
 
 
@@ -185,11 +188,13 @@ dialog#compare {
     width: 100%;
     border-collapse: collapse;
     margin: 0 auto;
+    text-align: center;
 }
 
 #compare td, #compare th {
     padding: 8px;
     text-align: left;
+    vertical-align: middle;
 }
 
 #compare .img img {
@@ -197,7 +202,10 @@ dialog#compare {
     height: auto;
     display: block;
     margin: 0 auto;
+    max-height: 150px;
 }
+
+
 
 #compare button {
     margin-top: 15px;
