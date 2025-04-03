@@ -267,6 +267,21 @@ button:hover {
 }
 
 
+.titulo-popup {
+    font-family: "Montserrat", sans-serif;
+    color: #333;
+}
+
+.popup {
+    font-family: "Montserrat", sans-serif;
+}
+
+.botao-popup {
+    font-family: "Montserrat", monospace;
+    background-color: #0044cc;
+    color: white;
+}
+
 @media (max-width: 768px) {
     .rodape {
         flex-direction: column;

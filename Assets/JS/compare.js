@@ -24,14 +24,24 @@ function SetCarToCompare(input, car) {
         return;
     }
 
-    if (carArr.length >= 2) {
+    if (carArr.length > 1) {
         input.checked = false;
-        alert("Não pode selecionar mais de dois carros");
+        Swal.fire({
+            title: "Aviso",
+            text: "Selecione apenas 2 carros",
+            icon: "warning",
+            confirmButtonText: "OK",
+            customClass: {
+                title: "titulo-popup",
+                popup: "popup",
+                confirmButton: "botao-popup"
+            }
+        })
         return;
     }
 
-    carArr.push(car);
-}
+        carArr.push(car);
+    }
 
 
 // search on array if exist carClass returning 1 if not return -1
@@ -46,7 +56,17 @@ function GetCarArrPosition(car) {
 
 function ShowCompare() {
     if(carArr.length !== 2 ) {
-        alert("Precisa marcar 2 carros para apresentar a comparação")
+        Swal.fire({
+            title: "Aviso",
+            text: "Precisa marcar 2 carros para apresentar a comparação",
+            icon: "warning",
+            confirmButtonText: "OK",
+            customClass: {
+                title: "titulo-popup",
+                popup: "popup",
+                confirmButton: "botao-popup"
+            }
+        })
         return
     }
 
