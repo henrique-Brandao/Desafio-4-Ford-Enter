@@ -13,11 +13,9 @@ class Carousel {
         this.prevBtn = document.getElementById("botaoTras");
         this.nextBtn = document.getElementById("botaoFrente");
 
-        // Eventos
         this.prevBtn.addEventListener("click", () => this.back());
         this.nextBtn.addEventListener("click", () => this.next());
 
-        // Inicia o carrossel
         this.updateCarousel();
         this.startAutoSlide();
     }
@@ -25,7 +23,7 @@ class Carousel {
     updateCarousel() {
         const currentItem = this.images[this.index];
 
-        // Atualiza imagem e título
+
         this.imageElement.src = currentItem.img;
         this.imageElement.alt = currentItem.title;
         this.titleElement.textContent = currentItem.title;
@@ -69,7 +67,7 @@ const carouselData = [
     }
 ];
 
-// Inicializa o carrossel quando a página carregar
+// Inicializa o carrossel quando a pagina carregar
 document.addEventListener("DOMContentLoaded", () => {
     new Carousel(carouselData);
 });
