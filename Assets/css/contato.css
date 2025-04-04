@@ -166,3 +166,20 @@ select {
     color: white !important;
 }
 
+@media (max-width: 768px) {
+    .rodape {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .rodape__container {
+        justify-content: center;
+    }
+    
+    ul.modelcars li {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 1.5rem;
+    }
+}

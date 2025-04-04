@@ -195,12 +195,20 @@ button {
     }
 }
 
-@media (max-width: 480px) {
-    #img {
-        max-height: 40vh;
+@media (max-width: 768px) {
+    .rodape {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
     }
     
-    .cabecalho__menu__links {
-        font-size: 1rem;
+    .rodape__container {
+        justify-content: center;
+    }
+    
+    ul.modelcars li {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 1.5rem;
     }
 }

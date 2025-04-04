@@ -180,9 +180,8 @@ table {
     padding: 20px;
     box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.34);
     border: none;
-    overflow: hidden; /* Remove a rolagem */
+    overflow: hidden; 
 }
-
 
 #compare table {
     width: 100%;
@@ -213,6 +212,44 @@ table {
     max-width: 200px;
 }
 
+dialog#ShowCar {
+    position: fixed;
+    width: 90vw;
+    max-width: 600px;
+    height: 77vh;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.34);
+    border: none;
+}
+
+#ShowCar table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 0.8rem;
+
+}
+
+#ShowCar td {
+    padding: 6px 4px; /* Padding reduzido */
+}
+
+#ShowCar .img img {
+    max-width: 100%;
+    height: auto;
+    max-height: 120px; /* Altura máxima reduzida */
+}
+
+#ShowCar button {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 150px;
+}
 
 
 button {
@@ -281,7 +318,6 @@ button:hover {
     background-color: #0044cc;
     color: white;
 }
-
 @media (max-width: 768px) {
     .rodape {
         flex-direction: column;
@@ -300,13 +336,25 @@ button:hover {
     }
 }
 
-
-#compare {
-    width: 90vw;
-    left: 5vw;
-    max-height: 80vh;
-    overflow-y: auto;
+@media (min-width: 769px) {
+    #ShowCar table {
+        font-size: 16px; 
+    }
+    
+    #ShowCar td {
+        padding: 8px 6px; 
+    }
+    
+    #ShowCar .img img {
+        max-height: 180px;
+    }
+    
+    #ShowCar button {
+        max-width: 180px;
+        height: 40px;
+    }
 }
+
 
 @media (max-width: 480px) {
     #compare table {
@@ -315,6 +363,27 @@ button:hover {
     
     #compare td, #compare th {
         padding: 4px;
+    }
+
+    dialog#ShowCar {
+        width: 95vw;
+        padding: 10px;
+    }
+    
+    #ShowCar table {
+        font-size: 12px;
+    }
+    
+    #ShowCar td {
+        padding: 4px 2px;
+    }
+    
+    #ShowCar .img img {
+        max-height: 100px;
+    }
+    
+    td:nth-child(1) {
+        width: 50%; 
     }
 }
 

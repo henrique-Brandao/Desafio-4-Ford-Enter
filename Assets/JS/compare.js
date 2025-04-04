@@ -44,6 +44,27 @@ function SetCarToCompare(input, car) {
     }
 
 
+    function ShowCarDetails(car) {
+        document.getElementById("carro-imagem-show").src = car.image;
+        document.getElementById("show_modelo").innerHTML = car.nome;
+        document.getElementById("show_alturacacamba").innerHTML = car.alturaCacamba;
+        document.getElementById("show_alturaveiculo").innerHTML = car.alturaVeiculo;
+        document.getElementById("show_alturasolo").innerHTML = car.alturaSolo;
+        document.getElementById("show_capacidadecarga").innerHTML = car.capacidadeCarga;
+        document.getElementById("show_motor").innerHTML = car.motor;
+        document.getElementById("show_potencia").innerHTML = car.potencia;
+        document.getElementById("show_volumecacamba").innerHTML = car.volumeCacamba;
+        document.getElementById("show_roda").innerHTML = car.roda;
+        document.getElementById("show_preco").innerHTML = `R$${car.preco}`;
+    
+        document.getElementById("ShowCar").showModal();
+    }
+    
+    function HideCarDetails() {
+        document.getElementById("ShowCar").close();
+    }
+
+
 // search on array if exist carClass returning 1 if not return -1
 function GetCarArrPosition(car) {
     for(let i = 0; i < carArr.length; i++){
