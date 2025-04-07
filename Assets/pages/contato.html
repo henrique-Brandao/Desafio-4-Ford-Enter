@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/contato.css">
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="shortcut icon" type="image/x-icon" href="./imgs/FORDZINHA.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../imgs/FORDZINHA.ico">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/imask"></script>
     <title>Contato</title>
 </head>
 
@@ -25,16 +26,22 @@
         <div class="principal__container">
 
             <h2 class="principal__container__subtitulo">Sobre Você</h2>
-            <form onsubmit="mostrarAlerta(event)" id="formulario" class="principal__container__formulario">
-                <input type="text" name="nome" placeholder="NOME*" class="fordform" required>
-                <input type="text" name="email" placeholder="E-MAIL*" class="fordform" required>
-                <input type="text" name="cpf" placeholder="CPF*" class="fordform" required>
-                <input type="text" name="sobrenome" placeholder="SOBRENOME*" class="fordform" required>
-                <input type="text" name="telefone" placeholder="TELEFONE*" class="fordform" required>
-                <select name="contato" class="fordform" required>
-                    <option selected>COMO DESEJA SER CONTATADO</option>
-                    <option>TELEFONE</option>
-                    <option>E-MAIL</option>
+            <form id="formulario" class="principal__container__formulario">
+                <input type="text" name="nome" placeholder="NOME*" id="nome"class="fordform" >
+                <span class="mensagem-erro" id="erro-nome"></span>
+                <input type="text" name="email" placeholder="E-MAIL*" id="email" class="fordform" >
+                <span class="mensagem-erro" id="erro-email"></span>
+                <input type="text" name="cpf" placeholder="CPF*" id="cpf" class="fordform" autocomplete="off" >
+                <span class="mensagem-erro" id="erro-cpf"></span>
+                <input type="text" name="sobrenome" placeholder="SOBRENOME*" id="sobrenome" class="fordform" >
+                <span class="mensagem-erro" id="erro-sobrenome"></span>
+                <input type="text" name="telefone" placeholder="TELEFONE*" id="telefone" class="fordform" >
+                <span class="mensagem-erro" id="erro-telefone"></span>
+                <select name="contato" id="contato" class="fordform" >
+                    <option value="" disabled selected>COMO DESEJA SER CONTATADO</option>
+                    <option value="telefone">TELEFONE</option>
+                    <option value="email">E-MAIL</option>
+                    <span class="mensagem-erro" id="erro-contato"></span>
                 </select>
                 <p class="paragrafoTermosCondicoes">Os dados serão mantidos em nossa base de dados, só enquanto for
                     desejado por você. A qualquer momento, será possível editar ou remover tais dados. <a

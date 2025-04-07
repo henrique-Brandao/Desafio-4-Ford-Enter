@@ -266,3 +266,17 @@ color: #a39d9d;
         align-items: center;
     }
 }
+
+.valido {
+    border: 1.5px solid rgb(91, 245, 91);
+}
+
+.invalido {
+    border: 1.5px solid rgb(245, 111, 111);
+}
+
+.mensagem-erro {
+    color: red;
+    font-size: 0.8rem;
+    text-align: start;
+}
