@@ -23,25 +23,32 @@
 
     <main class="principal">
         <div class="principal__container">
-            <div>
-            </div>
-            <div>
-                <h2 class="principal__container__subtitulo">Sobre Você</h2>
-                <form onsubmit="mostrarAlerta(event)" id="formulario" class="principal__container__formulario" >
-                    <input type="text" name="nome" placeholder="NOME*" class="fordform" required>
-                    <input type="text" name="email" placeholder="E-MAIL*" class="fordform" required>
-                    <input type="text" name="cpf" placeholder="CPF*" class="fordform" required>
-                    <input type="text" name="sobrenome" placeholder="SOBRENOME*" class="fordform" required>
-                    <input type="text" name="telefone" placeholder="TELEFONE*" class="fordform" required>
-                    <select name="contato" class="fordform" required>
-                        <option selected>COMO DESEJA SER CONTATADO</option>
-                        <option>TELEFONE</option>
-                        <option>E-MAIL</option>
-                    </select>
-                    <button type="submit" class="principal__container__formulario__botao">Enviar</button>
-                </form>
-                <img src="../imgs/xls 2.2 diesel.jpg">
-            </div>
+
+            <h2 class="principal__container__subtitulo">Sobre Você</h2>
+            <form onsubmit="mostrarAlerta(event)" id="formulario" class="principal__container__formulario">
+                <input type="text" name="nome" placeholder="NOME*" class="fordform" required>
+                <input type="text" name="email" placeholder="E-MAIL*" class="fordform" required>
+                <input type="text" name="cpf" placeholder="CPF*" class="fordform" required>
+                <input type="text" name="sobrenome" placeholder="SOBRENOME*" class="fordform" required>
+                <input type="text" name="telefone" placeholder="TELEFONE*" class="fordform" required>
+                <select name="contato" class="fordform" required>
+                    <option selected>COMO DESEJA SER CONTATADO</option>
+                    <option>TELEFONE</option>
+                    <option>E-MAIL</option>
+                </select>
+                <p class="paragrafoTermosCondicoes">Os dados serão mantidos em nossa base de dados, só enquanto for
+                    desejado por você. A qualquer momento, será possível editar ou remover tais dados. <a
+                        href="https://www.ford.com.br/politica-de-privacidade/" target="_blank">Termos e Condições</a></p><br>
+
+                <div class="divInput">
+                    <label><input type="checkbox" id="inputTermoCondicoes"> Sim. Li e concordo com os Termos e Condições</label>
+                </div><br>
+                <div class="divInput">
+                    <label><input type="checkbox"> Sim. Também quero receber descontos e novidades.</label>
+                </div>
+                <button type="submit" class="botaoDesativado" disabled>Enviar</button>
+            </form>
+            <img src="../imgs/xls 2.2 diesel.jpg">
         </div>
     </main>
 
@@ -61,7 +68,7 @@
         <img src="../imgs/ford-96.png" alt="logo ford" class="rodape__logo">
     </footer>
 
-<script src="../JS/form.js" type="text/javascript"></script>
+    <script src="../JS/form.js" type="text/javascript"></script>
 </body>
 
 </html>
