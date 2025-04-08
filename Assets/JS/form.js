@@ -9,30 +9,6 @@ function validarEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email.trim());
 }
-// function aplicarMascara(input, mascara) {
-//     input.addEventListener('input', () => {
-//         let valor = input.value.replace(/\D/g, '');
-//         let resultado = '';
-//         let i = 0;
-
-//         for (let m of mascara) {
-//             if (m === '#') {
-//                 if (valor[i]) {
-//                     resultado += valor[i++];
-//                 } else {
-//                     break;
-//                 }
-//             } else {
-//                 resultado += m;
-//             }
-//         }
-
-//         input.value = resultado;
-//     });
-// }
-
-// aplicarMascara(inputCPF, "###.###.###-##")
-// aplicarMascara(inputTelefone, "(##) #####-####")
 
 function validarCPF(cpf) {
     cpf = cpf.replace(/\D/g, '');
@@ -40,7 +16,6 @@ function validarCPF(cpf) {
     if (cpf.length !== 11 || /^(\d)\1{10}$/.test(cpf)) {
         return false;
     }
-
 
     let soma = 0;
     for (let i = 0; i < 9; i++) {
@@ -134,7 +109,7 @@ inputCPF.addEventListener('input', () => {
     inputCPF.classList.add(valido ? 'valido' : 'invalido');
 
     if (!valido) {
-        mostrarErro('erro-cpf', 'Insira o CPF');
+        mostrarErro('erro-cpf', 'Insira um CPF válido');
     } else {
         esconderErro('erro-cpf');
     }
@@ -160,7 +135,7 @@ inputTelefone.addEventListener('input', () => {
     inputTelefone.classList.add(valido ? 'valido' : 'invalido');
 
     if (!valido) {
-        mostrarErro('erro-telefone', 'Insira o telefone');
+        mostrarErro('erro-telefone', 'Insira um telefone');
     } else {
         esconderErro('erro-telefone');
     }
@@ -199,7 +174,6 @@ formulario.addEventListener('submit', (event) => {
     const algumVazio = camposObrigatorios.some(input => input.value.trim() === '');
     const camposInvalidos = formulario.querySelectorAll('.invalido');
 
-    // Marcar os campos vazios como inválidos (visual)
     camposObrigatorios.forEach(input => {
         if (input.value.trim() === '') {
             input.classList.remove('valido');
@@ -223,7 +197,6 @@ formulario.addEventListener('submit', (event) => {
         return;
     }
 
-    // Se tudo estiver certo
     event.preventDefault()
     Swal.fire({
         title: "Sucesso!",

@@ -104,7 +104,7 @@ textarea {
 .paragrafoTermosCondicoes{
     color: #a39d9d;
     text-align: start;
-    padding-top: 1%;
+    padding-top: 20px;
 }
 
 .botaoAtivado {
@@ -148,6 +148,9 @@ select {
 #formulario{
     height: 100%;
     width: 47%;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
 }
 
 .divInput{
